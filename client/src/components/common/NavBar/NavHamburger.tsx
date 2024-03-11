@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import NavBarLink from "./NavBarLink";
 
 export default function NavHamburger() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -14,7 +15,7 @@ export default function NavHamburger() {
       <div className="w-full flex items-end justify-end">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="bg-black hover:bg-gray-800 size-10 flex items-center justify-center"
+          className="bg-black bg-opacity-60 hover:bg-opacity-80 size-10 flex items-center justify-center"
         >
           <svg
             className="w-6 h-6"
@@ -36,36 +37,17 @@ export default function NavHamburger() {
       <motion.div
         initial="closed"
         animate={isOpen ? "open" : "closed"}
-        // animate="open"
         variants={variants}
         transition={{ duration: 0.2 }}
         style={{ overflow: "hidden", display: "block" }}
-        className="bg-black text-start w-[30vw]"
+        className="bg-black bg-opacity-60 text-start w-[35vw] sm:w-[30vw] p-2 rounded-b-xl rounded-tl-xl"
       >
-        <a
-          href="#home"
-          className="block px-4 py-2 text-sm text-gray-100 hover:bg-gray-800"
-        >
-          Home
-        </a>
-        <a
-          href="#portfolio"
-          className="block px-4 py-2 text-sm text-gray-100 hover:bg-gray-800"
-        >
-          Portfolio
-        </a>
-        <a
-          href="#services"
-          className="block px-4 py-2 text-sm text-gray-100 hover:bg-gray-800"
-        >
-          Services
-        </a>
-        <a
-          href="#about"
-          className="block px-4 py-2 text-sm text-gray-100 hover:bg-gray-800"
-        >
-          About
-        </a>
+        <ul className="list-none p-[2px] flex-col flex gap-1">
+          <NavBarLink title="Home" path="/" />
+          <NavBarLink title="Portfolio" path="/portfolio" />
+          <NavBarLink title="Services" path="/services" />
+          <NavBarLink title="About" path="/about" />
+        </ul>
       </motion.div>
     </>
   );
