@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import bg from "../assets/bg.png";
+import Hero from "../components/Hero";
 import Header from "../components/common/Header";
 
 export default function PortfolioPage() {
@@ -7,20 +7,16 @@ export default function PortfolioPage() {
     <div>
       <div
         id="background-section"
-        className="w-full h-[75vh] bg-cover bg-center flex items-start justify-center"
+        className=" h-[75vh] bg-cover bg-center flex items-start justify-center m-2 rounded-xl box-border"
         style={{ backgroundImage: `url(${bg})` }}
       >
         <Header />
       </div>
 
-      <div className="flex flex-row w-full gap-10 px-10 py-4">
-        <h1 className="text-7xl border-2 border-black">Big Header Text</h1>
-        <p className=" border-2 border-red-500">
-          This is the body text that explains more about the service or product.
-          It's arranged below the big header text, providing visitors with
-          essential information in an engaging manner.
-        </p>
-      </div>
+      <Hero
+        title="Transforming visions into reality"
+        description="Discover the cornerstone of our creativity and expertise through our curated collection of projects. Each design in our portfolio represents a unique fusion of functionality, innovation, and aesthetic excellence, meticulously tailored to meet the specific needs and aspirations of our clients. From sleek modern homes to dynamic commercial spaces, our portfolio showcases our commitment to pushing boundaries and crafting environments that inspire."
+      />
     </div>
   );
 }
