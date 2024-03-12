@@ -1,5 +1,5 @@
-import NavHamburger from "./NavBar/NavHamburger";
-import NavStandard from "./NavBar/NavStandard";
+import NavHamburger from "../NavBar/NavHamburger";
+import NavStandard from "../NavBar/NavStandard";
 
 export default function Header() {
   return (
