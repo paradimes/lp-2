@@ -9,7 +9,7 @@ export default function Header() {
     >
       <button className="bg-black bg-opacity-60 p-[2px] rounded-full">
         <div className="bg-black hover:bg-opacity-60 px-6 py-[3px] rounded-full text-white">
-          ArchitectsYYZ
+          ArchitectsNYC
         </div>
       </button>
 

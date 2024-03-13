@@ -16,7 +16,7 @@ export default function ServicesPage() {
 
       <Hero
         title="Elevate Your Space, Embrace Innovation"
-        description="At ArchitectsYYZ, we blend creativity with functionality to bring your vision to life. Our dedicated team offers a comprehensive suite of services designed to meet every aspect of your architectural and design needs. Explore our services below to see how we can transform your space into a masterpiece of form and function."
+        description="At ArchitectsNYC, we blend creativity with functionality to bring your vision to life. Our dedicated team offers a comprehensive suite of services designed to meet every aspect of your architectural and design needs. Explore our services below to see how we can transform your space into a masterpiece of form and function."
         showButton={false}
       />
       <ServicesSection />
