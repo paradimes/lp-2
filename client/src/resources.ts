@@ -78,3 +78,37 @@ export const projects = [
     projectImg: retreat,
 }
 ];
+
+
+export const services = [
+  {
+    id: 1,
+    title: "Design Consultation",
+    description: "Every great project begins with a conversation. Our design consultation service is your first step toward realizing the potential of your space. We listen, we observe, and we collaborate with you to ensure your vision, needs, and desires are at the forefront of our innovative design solutions.",
+    // icon: "path/to/landscape-architecture-icon.svg",
+  },
+  {
+    id: 2,
+    title: "Architectural Design",
+    description: "Our architectural design service is at the heart of what we do. From residential homes that reflect your personality to commercial spaces that meet the demands of your business, we create structures that are not only visually stunning but also highly functional and sustainable.",
+    // icon: "path/to/architectural-design-icon.svg", // Replace with your actual icon path or import statement
+  },
+  {
+    id: 3,
+    title: "Interior Design",
+    description: "Transform the interior of your space into a living work of art. Our interior design service covers everything from spatial planning and material selection to furniture and decor, ensuring that every inch of your interior is cohesive, beautiful, and tailored to your lifestyle.",
+    // icon: "path/to/interior-design-icon.svg",
+  },
+  {
+    id: 4,
+    title: "Landscape Design",
+    description: "Extend the beauty of your architecture into the natural world. Our landscape design service creates outdoor spaces that complement your architectural style, enhance your property's curb appeal, and provide serene environments for relaxation and recreation.",
+    // icon: "path/to/landscape-architecture-icon.svg",
+  },
+  {
+    id: 5,
+    title: "Project Management",
+    description: "With our project management service, you can rest assured that your project is in expert hands. We oversee every detail of the construction process, ensuring that your project is completed on time, within budget, and to the highest quality standards.",
+    // icon: "path/to/landscape-architecture-icon.svg",
+  },
+];

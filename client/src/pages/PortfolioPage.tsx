@@ -2,7 +2,7 @@ import bg from "../assets/portfolioBg.jpeg";
 import Hero from "../components/Hero";
 import PortfolioMasonry from "../components/PortfolioMasonry";
 import Header from "../components/common/Header";
-import { projects } from "../portfolio";
+import { projects } from "../resources";
 
 export default function PortfolioPage() {
   return (

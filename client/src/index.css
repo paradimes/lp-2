@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -7,11 +6,4 @@
 
 body {
   font-family: "Helvetica Neue", "Arial", "Roboto", "Open Sans", sans-serif;
-}
-
-.oswald-font {
-  font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
 }

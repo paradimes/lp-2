@@ -1,5 +1,6 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import bg from "../assets/homeBg.jpeg";
+import bg from "../assets/servicesBg.jpeg";
+import Hero from "../components/Hero";
+import ServicesSection from "../components/ServicesSection";
 import Header from "../components/common/Header";
 
 export default function ServicesPage() {
@@ -7,20 +8,18 @@ export default function ServicesPage() {
     <div>
       <div
         id="background-section"
-        className="w-full h-[75vh] bg-cover bg-center flex items-start justify-center"
+        className=" h-[75vh] bg-cover bg-center flex items-start justify-center m-2 rounded-xl box-border"
         style={{ backgroundImage: `url(${bg})` }}
       >
         <Header />
       </div>
 
-      <div className="flex flex-row w-full gap-10 px-10 py-4">
-        <h1 className="text-7xl border-2 border-black">Big Header Text</h1>
-        <p className=" border-2 border-red-500">
-          This is the body text that explains more about the service or product.
-          It's arranged below the big header text, providing visitors with
-          essential information in an engaging manner.
-        </p>
-      </div>
+      <Hero
+        title="Elevate Your Space, Embrace Innovation"
+        description="At ArchitectsYYZ, we blend creativity with functionality to bring your vision to life. Our dedicated team offers a comprehensive suite of services designed to meet every aspect of your architectural and design needs. Explore our services below to see how we can transform your space into a masterpiece of form and function."
+        showButton={false}
+      />
+      <ServicesSection />
     </div>
   );
 }
