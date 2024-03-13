@@ -15,7 +15,7 @@ export default function PortfolioMasonry({ projects }: PortfolioMasonryProps) {
       {projects.map((project) => (
         <div
           key={project.id}
-          className="masonry-item break-inside-avoid mb-4 bg-stone-200 hover:bg-stone-300 rounded-lg p-4"
+          className="masonry-item break-inside-avoid mb-4 bg-stone-200 hover:bg-stone-300 rounded-lg p-4 hover:cursor-pointer"
         >
           <h3 className="font-bold hover:underline">{project.title}</h3>
           <p>{project.description}</p>
