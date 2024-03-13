@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import bg from "../assets/bg.png";
+import bg from "../assets/homeBg.jpeg";
 import Header from "../components/common/Header";
 
 export default function AboutPage() {
