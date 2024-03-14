@@ -1,7 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import NavHamburger from "../NavBar/NavHamburger";
 import NavStandard from "../NavBar/NavStandard";
 
 export default function Header() {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/contact");
+  };
+
   return (
     <header
       id="header"
@@ -21,7 +27,10 @@ export default function Header() {
       {/* Standard Navbar for larger screens */}
       <NavStandard />
 
-      <button className="hidden lg:flex bg-black bg-opacity-60 p-[2px] rounded-full">
+      <button
+        className="hidden lg:flex bg-black bg-opacity-60 p-[2px] rounded-full"
+        onClick={handleClick}
+      >
         <div className="bg-black hover:bg-opacity-60 px-6 py-[3px] rounded-full text-white ">
           Contact Us
         </div>

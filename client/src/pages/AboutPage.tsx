@@ -1,4 +1,4 @@
-import bg from "../assets/about.jpeg";
+import bg from "../assets/team.jpeg";
 import AboutSection from "../components/AboutSection";
 import Hero from "../components/Hero";
 import Header from "../components/common/Header";

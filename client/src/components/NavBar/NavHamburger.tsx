@@ -47,6 +47,7 @@ export default function NavHamburger() {
           <NavBarLink title="Portfolio" path="/portfolio" />
           <NavBarLink title="Services" path="/services" />
           <NavBarLink title="About" path="/about" />
+          <NavBarLink title="Contact Us" path="/contact" />
         </ul>
       </motion.div>
     </>

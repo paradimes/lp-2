@@ -11,7 +11,7 @@ export default function Hero({
   showButton,
 }: HeroProps) {
   return (
-    <div className="flex flex-col lg:flex-row w-full gap-5 lg:gap-[120px] px-5 md:px-10 py-5 items-start lg:items-center 2xl:justify-center">
+    <div className="flex flex-col lg:flex-row w-full gap-5 lg:gap-[120px] px-5 md:px-10 py-5 items-start lg:items-center">
       <h1 className=" text-[52px] sm:text-[64px] lg:text-[88px] leading-tight w-fit">
         {title}
       </h1>
