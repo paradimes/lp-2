@@ -1,15 +1,24 @@
+import { useNavigate } from "react-router-dom";
+
 type HeroProps = {
   title: string;
   description: string;
   buttonTitle?: string;
   showButton: boolean;
+  link?: string;
 };
 export default function Hero({
   title,
   description,
   buttonTitle,
   showButton,
+  link,
 }: HeroProps) {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(`/${link}`);
+  };
+
   return (
     <div className="flex flex-col lg:flex-row w-full gap-5 lg:gap-[120px] px-5 md:px-10 py-5 items-start lg:items-center">
       <h1 className=" text-[52px] sm:text-[64px] lg:text-[88px] leading-tight w-fit">
@@ -21,7 +30,10 @@ export default function Hero({
       >
         <p className="">{description}</p>
         {showButton && (
-          <button className=" border-[1px] border-black bg-white hover:bg-black hover:text-white flex flex-row items-center justify-center gap-4 px-6 py-4 rounded-full">
+          <button
+            className=" border-[1px] border-black bg-white hover:bg-black hover:text-white flex flex-row items-center justify-center gap-4 px-6 py-4 rounded-full"
+            onClick={handleClick}
+          >
             <span className="text-[19px]">{buttonTitle}</span>
             <div className="svg-icon">
               <svg

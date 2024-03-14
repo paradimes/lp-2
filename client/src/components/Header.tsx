@@ -4,8 +4,8 @@ import NavStandard from "./NavBar/NavStandard";
 
 export default function Header() {
   const navigate = useNavigate();
-  const handleClick = () => {
-    navigate("/contact");
+  const handleClick = (path: string) => {
+    navigate(`/${path}`);
   };
 
   return (
@@ -13,7 +13,10 @@ export default function Header() {
       id="header"
       className="flex items-start justify-between w-full mx-5 my-10 md:m-10"
     >
-      <button className="bg-black bg-opacity-60 p-[2px] rounded-full">
+      <button
+        className="bg-black bg-opacity-60 p-[2px] rounded-full"
+        onClick={() => handleClick("")}
+      >
         <div className="bg-black hover:bg-opacity-60 px-6 py-[3px] rounded-full text-white">
           ArchitectsNYC
         </div>
@@ -29,7 +32,7 @@ export default function Header() {
 
       <button
         className="hidden lg:flex bg-black bg-opacity-60 p-[2px] rounded-full"
-        onClick={handleClick}
+        onClick={() => handleClick("contact")}
       >
         <div className="bg-black hover:bg-opacity-60 px-6 py-[3px] rounded-full text-white ">
           Contact Us
