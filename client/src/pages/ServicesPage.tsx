@@ -1,7 +1,7 @@
 import bg from "../assets/servicesBg.jpeg";
 import Hero from "../components/Hero";
 import ServicesSection from "../components/ServicesSection";
-import Header from "../components/common/Header";
+import Header from "../components/Header";
 
 export default function ServicesPage() {
   return (

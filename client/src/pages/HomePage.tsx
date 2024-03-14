@@ -1,6 +1,6 @@
 import bg from "../assets/homeBg.jpeg";
 import Hero from "../components/Hero";
-import Header from "../components/common/Header";
+import Header from "../components/Header";
 
 export default function HomePage() {
   return (

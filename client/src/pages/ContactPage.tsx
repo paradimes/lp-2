@@ -1,7 +1,7 @@
 import bg from "../assets/about.jpeg";
 import ContactForm from "../components/Form/ContactForm";
 import Hero from "../components/Hero";
-import Header from "../components/common/Header";
+import Header from "../components/Header";
 
 export default function ContactPage() {
   return (

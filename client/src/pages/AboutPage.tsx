@@ -1,7 +1,7 @@
 import bg from "../assets/team.jpeg";
 import AboutSection from "../components/AboutSection";
 import Hero from "../components/Hero";
-import Header from "../components/common/Header";
+import Header from "../components/Header";
 
 export default function AboutPage() {
   return (
