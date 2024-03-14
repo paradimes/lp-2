@@ -13,6 +13,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { toast } from "@/components/ui/use-toast";
 
 export default function ContactForm() {
   const form = useForm<z.infer<typeof contactFormSchema>>({
@@ -26,15 +27,15 @@ export default function ContactForm() {
   });
 
   // Errors object
-  console.log("formErrors: ", JSON.stringify(form.formState.errors, null, 4));
-  console.log("-----------------------------------------");
+  //   console.log("formErrors: ", JSON.stringify(form.formState.errors, null, 4));
+  //   console.log("-----------------------------------------");
 
   function onSubmit(_values: z.infer<typeof contactFormSchema>) {
     console.log(_values);
-    //   toast({
-    //     title: "Reservation Confirmed",
-    //     description: "We will be in touch with you soon!",
-    //   });
+    toast({
+      title: "Message Received",
+      description: "We will be in touch with you soon!",
+    });
   }
 
   return (
