@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 type HeroProps = {
@@ -19,20 +20,50 @@ export default function Hero({
     navigate(`/${link}`);
   };
 
+  const titleVariant = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.2 } },
+  };
+
+  const descriptionVariant = {
+    hidden: { opacity: 0, y: 0 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.7 } },
+  };
+
+  const buttonVariant = {
+    hidden: { opacity: 0, y: 0 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 1.2 } },
+  };
+
   return (
     <div className="flex flex-col lg:flex-row w-full gap-5 lg:gap-[120px] px-5 md:px-10 py-5 items-start lg:items-center">
-      <h1 className=" text-[52px] sm:text-[64px] lg:text-[88px] leading-tight w-fit">
+      <motion.h1
+        className=" text-[52px] sm:text-[64px] lg:text-[88px] leading-tight w-fit"
+        variants={titleVariant}
+        initial="hidden"
+        animate="visible"
+      >
         {title}
-      </h1>
+      </motion.h1>
       <div
         id="call-to-action"
         className="flex flex-col items-start justify-center gap-6 max-w-full lg:max-w-[440px]"
       >
-        <p className="">{description}</p>
+        <motion.p
+          className="text-black"
+          variants={descriptionVariant}
+          initial="hidden"
+          animate="visible"
+        >
+          {description}
+        </motion.p>
         {showButton && (
-          <button
+          <motion.button
             className=" border-[1px] border-black bg-white hover:bg-black hover:text-white flex flex-row items-center justify-center gap-4 px-6 py-4 rounded-full"
             onClick={handleClick}
+            variants={buttonVariant}
+            initial="hidden"
+            animate="visible"
           >
             <span className="text-[19px]">{buttonTitle}</span>
             <div className="svg-icon">
@@ -57,7 +88,7 @@ export default function Hero({
                 />
               </svg>
             </div>
-          </button>
+          </motion.button>
         )}
       </div>
     </div>

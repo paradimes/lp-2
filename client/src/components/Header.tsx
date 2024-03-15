@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import NavHamburger from "./NavBar/NavHamburger";
 import NavStandard from "./NavBar/NavStandard";
+import { motion } from "framer-motion";
 
 export default function Header() {
   const navigate = useNavigate();
@@ -8,36 +9,56 @@ export default function Header() {
     navigate(`/${path}`);
   };
 
+  const headerVariants = {
+    hidden: { y: -100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 70,
+        damping: 20,
+      },
+    },
+  };
+
   return (
-    <header
-      id="header"
-      className="flex items-start justify-between w-full mx-5 my-10 md:m-10"
+    <motion.header
+      initial="hidden"
+      animate="visible"
+      variants={headerVariants}
+      className="w-full absolute top-0 left-0 bg-none z-50"
     >
-      <button
-        className="bg-black bg-opacity-60 p-[2px] rounded-full"
-        onClick={() => handleClick("")}
+      <header
+        id="header"
+        className="flex items-start justify-between mx-5 my-10 md:mx-10"
       >
-        <div className="bg-black hover:bg-opacity-60 px-6 py-[3px] rounded-full text-white">
-          ArchitectsNYC
+        <button
+          className="bg-black bg-opacity-60 p-[2px] rounded-full"
+          onClick={() => handleClick("")}
+        >
+          <div className="bg-black hover:bg-opacity-60 px-6 py-[3px] rounded-full text-white">
+            ArchitectsNYC
+          </div>
+        </button>
+
+        {/* Hamburger NavBar */}
+        <div className="lg:hidden">
+          <NavHamburger />
         </div>
-      </button>
 
-      {/* Hamburger NavBar */}
-      <div className="lg:hidden">
-        <NavHamburger />
-      </div>
+        {/* Standard Navbar for larger screens */}
+        <NavStandard />
 
-      {/* Standard Navbar for larger screens */}
-      <NavStandard />
-
-      <button
-        className="hidden lg:flex bg-black bg-opacity-60 p-[2px] rounded-full"
-        onClick={() => handleClick("contact")}
-      >
-        <div className="bg-black hover:bg-opacity-60 px-6 py-[3px] rounded-full text-white ">
-          Contact Us
-        </div>
-      </button>
-    </header>
+        <button
+          className="hidden lg:flex bg-black bg-opacity-60 p-[2px] rounded-full"
+          onClick={() => handleClick("contact")}
+        >
+          <div className="bg-black hover:bg-opacity-60 px-6 py-[3px] rounded-full text-white ">
+            Contact Us
+          </div>
+        </button>
+      </header>
+    </motion.header>
   );
 }
