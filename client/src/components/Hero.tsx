@@ -8,6 +8,22 @@ type HeroProps = {
   showButton: boolean;
   link?: string;
 };
+
+const titleVariant = {
+  hidden: { opacity: 0, y: -20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.2 } },
+};
+
+const descriptionVariant = {
+  hidden: { opacity: 0, y: 0 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.7 } },
+};
+
+const buttonVariant = {
+  hidden: { opacity: 0, y: 0 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 1.2 } },
+};
+
 export default function Hero({
   title,
   description,
@@ -18,21 +34,6 @@ export default function Hero({
   const navigate = useNavigate();
   const handleClick = () => {
     navigate(`/${link}`);
-  };
-
-  const titleVariant = {
-    hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.2 } },
-  };
-
-  const descriptionVariant = {
-    hidden: { opacity: 0, y: 0 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.7 } },
-  };
-
-  const buttonVariant = {
-    hidden: { opacity: 0, y: 0 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 1.2 } },
   };
 
   return (

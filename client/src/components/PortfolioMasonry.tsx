@@ -11,12 +11,12 @@ type PortfolioMasonryProps = {
   projects: Project[];
 };
 
-export default function PortfolioMasonry({ projects }: PortfolioMasonryProps) {
-  const fadeInVariant = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.5 } },
-  };
+const fadeInVariant = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.5 } },
+};
 
+export default function PortfolioMasonry({ projects }: PortfolioMasonryProps) {
   return (
     <div className="masonry columns-1 md:columns-2 lg:columns-3  gap-x-4 m-5 md:m-10  ">
       {projects.map((project) => (
