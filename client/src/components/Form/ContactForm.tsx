@@ -30,8 +30,9 @@ export default function ContactForm() {
   //   console.log("formErrors: ", JSON.stringify(form.formState.errors, null, 4));
   //   console.log("-----------------------------------------");
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   function onSubmit(_values: z.infer<typeof contactFormSchema>) {
-    console.log(_values);
+    // console.log(_values);
     toast({
       title: "Message Received",
       description: "We will be in touch with you soon!",
